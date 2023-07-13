@@ -1,0 +1,17 @@
+[user]
+	name = Ignasi CP
+	email = 116747620+icplana@users.noreply.github.com
+[core]
+	editor = code --wait
+	autocrlf = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	s = status --short
+	pom = push origin main
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold cyan)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[init]
+	defaultBranch = main
